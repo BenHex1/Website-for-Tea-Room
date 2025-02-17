@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span><img src="logo.png" alt="Logo"></span>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "findMore.html">Find out more</a></li>
+            <li><a href = "viewReq.php">View requests</a></li>
+            <li><a href = "credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    
+    <header class="homeHeader">
+        <h1>Chollerton Tearooms</h1>
+    </header>
+    <main>
+        <form action="submit.php" method="post">
+            <div class = "formContainer">
+                <label for="firstName">First name</label> <!-- Is used to help blind people as a screen reader can read this label -->
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class = "formContainer">
+                <label for="lastName">Last name</label> 
+                <input type="text" name="lastName" id="lastName" required>
+            </div>
+            <div class = "formContainer">
+                <label for="postAddress">postal address</label>
+                <input type="text" name="postAddress" id="postAddress" required>
+            </div>
+            <div class = "formContainer">
+                <label for="phoneNum">phone number</label>
+                <input type="tel" name="phoneNum" id="phoneNum" required>
+            </div>
+            <div class = "formContainer">
+                <label for="email">email address</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="category">Select a category of interest</label>
+                <select name="category" id="category" required>
+                    <option value="" selected disabled>Choose an option</option>
+                    <option value="c5">Bed and Breakfast</option>
+                    <option value="c2">Craft Shop</option>
+                    <option value="c4">Post office</option>
+                    <option value="c1">Tearoom</option>
+                    <option value="c3">Village store</option>
+                </select>
+            </div>
+            <div>
+                <label for="sendMethod">Select a send method</label>
+                <select name="sendMethod" id="sendMethod" required>
+                    <option value="" selected disabled>Choose an option</option>
+                    <option value="post">post</option>
+                    <option value="email">email</option>
+                </select>
+            </div>
+            <button type = "submit" class = "bttn">Submit</button>
+        </form>
+        
+    </main>
+    
+</body>
+</html>

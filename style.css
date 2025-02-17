@@ -1,0 +1,155 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: rgb(241, 241, 241);
+}
+
+.navbar{
+    background-color: rgb(36, 116, 40);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h2{
+    color: #a2c59f;
+}
+
+.navbar span img{
+    width: 144px;
+    height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 0px;
+    justify-content: end;
+    padding-left: 0px;
+}
+
+.navbar a{
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.navbar a:hover{
+    background-color: rgb(163, 185, 153);
+}
+
+.homeHeader{
+    background-image: url("roomPic.jpg");
+    background-size: cover;
+    padding: 100px 0;
+    background-position: center;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.445);
+    background-blend-mode: multiply;
+}
+
+.homeHeader h1{
+    font-size: 4rem;
+}
+
+main{
+    padding: 2%;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+    padding: 5px;
+
+}
+
+/* setting the grid arrangment for mobile to 1 collumn else the images get cut off */
+@media only screen and (max-width:480px){
+    .grid-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8,1fr);
+        grid-gap: 10px;
+        padding: 5px;
+    }
+}
+
+.grid-item{
+    padding: 10px;
+}
+
+.grid-map{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Images used as background images so that they resize to the height of the text in the same row */
+.grid-img-aboutUs{
+    background-image: url("aboutUsPic.jpg");
+    background-size:cover;
+    background-position: center;
+}
+
+.grid-img-BndB{
+    background-image: url("bedPic.jpg");
+    background-size:cover;
+    background-position: center;
+}
+
+.grid-img-act{
+    background-image: url("hikingPic.jpg");
+    background-size:cover;
+    background-position: bottom;
+}
+
+.formContainer input{
+    display: block;
+    width: 98%;
+    border-radius: 8px;
+    height: 1.5rem;
+    padding-left: 10px;
+}
+
+.formContainer{
+    margin-bottom: 15px;
+}
+
+.bttn {
+    background-color: #247428;
+    border: 0px;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding:10px;
+    text-align: left;
+}
+/* Makes it so when hoving over a row in the table it lights up */
+.tableBody:hover{
+    background-color: rgb(162, 185, 152);
+}
+
+/* Sets the table to be able to be scrolled due to it being too large for a mobiles screen width */
+@media only screen and (max-width:480px){
+    table{
+        overflow-x: auto;
+        display: block;
+    }   
+}

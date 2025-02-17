@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span><img src="logo.png" alt="Logo"></span>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "findMore.html">Find out more</a></li>
+            <li><a href = "viewReq.php">View requests</a></li>
+            <li><a href = "credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    
+    <header class="homeHeader">
+        <h1>Chollerton Tearooms</h1>
+    </header>
+    <main>
+        <h2>Author</h2>
+        <p>Name: Ben Hugill</p>
+        <p>id: w22011554</p>
+        <p>email: ben.hugill@northumbria.ac.uk</p>
+        <h2>References</h2>
+        <p>Ksenia Chernaya. (Nov 7, 2019). Interior of well lit stylish coffee house. Interior of well-lit stylish coffee house [Photograph]. Pexels. https://www.pexels.com/photo/3951751/</p>
+        <p>Stock Adobe. (n.d.). The teapot icon, tea symbol, teapot isolated on white background vector stock [Illustration]. Adobe Stock. https://stock.adobe.com/be_en/images/the-teapot-icon-tea-symbol-teapot-isolated-on-white-background-vector-stock/195304782</p>
+        <p>Pexels (May 11, 2017). Beverage, blue, book, breakfast. [Photograph]. Pexels. https://www.pexels.com/photo/beverage-blue-book-breakfast-531829/</p>
+        <p>Curtis Adams. (January 11th, 2020). Bed near window blinds and lighted desk lamps. [Photograph].Pexels. https://www.pexels.com/photo/bed-near-window-blinds-and-lighted-desk-lamps-3555618/</p>
+        <p>Markus Spiske. (Aug 9, 2016). Landscape mountains nature water. [Photograph]. Pexels. https://www.pexels.com/photo/landscape-mountains-nature-water-143574/</p>
+
+        <h2>Security concerns</h2>
+        <p>
+            The two most common vulnerabilities that can affect a website such as this are SQL injection and cross-site-scripting (XSS). 
+            An SQL injection occurs when an attacker is able to manipulate the input of a websites SQL query which in this case is the inputs on the find out more page.
+        </p>
+        <p>Some potential security concerns that can arise from SQL injections are:</p>
+        <p>
+            <ul>
+                <li>Unauthorised data access. Allowing an attacker to extract sensitive data from the database, however the database is shown in full on the view requests page but under usual circumstances this would not be the case.</li>
+                <li>Data modification or deletion. An attacker can modify or delete data from the database causing data loss or tampering.</li>
+                <li>Denial of service (DoS). An attacker executing malicious queries may cause the websites database to become overwhelmed.</li>
+            </ul>
+        </p>
+        <p>
+            To combat SQL injections I have used the real_escape_string() function in my submit.php file when defining the variables. 
+            Another method I could include to combat this attack is the principle of least privilege, which ensures the user has limited permissions which minimises the potential damage of a successful attack. 
+        </p>
+        <p>Some potential security concerns that can arise from XSS are:</p>
+        <p>
+            <ul>
+                <li>Session hacking. Allowing attackers to steal user session cookies therefore allowing them to impersonate the user and perform actions on their behalf.</li>
+                <li>Defacement. Attackers can modify the appearance of the website.</li>
+                <li>Information theft. An attacker can steal sensitive user data such as login details or personal data.</li>
+            </ul>
+        </p>
+        <p>To combat cross-site-scripting (XSS) I have used the htmlspecialchars() function which converts special predefined characters to html entries. This is know as output encoding. 
+           Another method I could include to combat this attack is a Content Security Policy (CSP), which specifies which sources of content are considered trustworthy therefore reducing the impact of a XSS attack.
+        </p>
+        <p>The final security concern I have considered yet have no means to prevent is the lack of a Secure Socket Layer (SSL) as the hosting used on www.numyspace.co.uk does not have this feature. This leaves the website vulnerable to packet sniffing.</p>
+    </main>
+    
+</body>
+</html>
+
